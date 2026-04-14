@@ -33,7 +33,7 @@
           <a href="#hero">Beranda</a>
           <a href="#profile">Profil</a>
           <a href="#why-us">Keunggulan</a>
-          <a href="#brands">Produk</a>
+          <a href="#produk-unggulan">Produk</a>
           <a href="#location">Lokasi</a>
           <a href="#cta" class="btn-hubungi">Hubungi Kami</a>
         </nav>
@@ -114,8 +114,8 @@
           </div>
         </div>
         <div class="hero-photo">
-          <img src="images/toko/toko-inside.png" alt="Interior Toko Galumbang"
-            onerror="this.style.display='none'" />
+          <img src="images/toko/sparepart-spring.jpg" alt="Sparepart Motor Berkualitas"
+            onerror="this.style.display='none'" style="object-position:center center" />
           <div class="hero-photo-overlay"></div>
           <div class="hero-photo-text">
             <p>850+</p>
@@ -149,23 +149,29 @@
           usaha ini terus berkembang mengikuti zaman.
         </p>
 
-        <div class="timeline-box">
+        <div class="timeline-box" style="position:relative;overflow:hidden">
+          <!-- Dekorasi ikon sparepart -->
+          <div style="position:absolute;right:-8px;bottom:-8px;opacity:0.06;pointer-events:none;display:flex;flex-direction:column;gap:2px;align-items:flex-end">
+            <svg width="68" height="68" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M44 8c-6.6 0-12 5.4-12 12 0 2 .5 3.8 1.3 5.4L8 56l6 6 30.6-25.3c1.6.8 3.5 1.3 5.4 1.3 6.6 0 12-5.4 12-12 0-1.5-.3-3-.8-4.3l-7.2 7.2-4-1-1-4 7.2-7.2C54.9 11.3 49.7 8 44 8z" fill="#2B2B2B"/></svg>
+            <svg width="54" height="54" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="8" width="32" height="20" rx="4" fill="#2B2B2B"/><rect x="20" y="4" width="24" height="6" rx="2" fill="#2B2B2B"/><rect x="28" y="28" width="8" height="28" rx="2" fill="#2B2B2B"/><rect x="12" y="14" width="4" height="8" rx="1" fill="#2B2B2B"/><rect x="48" y="14" width="4" height="8" rx="1" fill="#2B2B2B"/></svg>
+            <svg width="44" height="44" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="32" cy="32" r="20" fill="none" stroke="#2B2B2B" stroke-width="4"/><circle cx="32" cy="32" r="8" fill="#2B2B2B"/><path d="M32 4v12M32 48v12M4 32h12M48 32h12" stroke="#2B2B2B" stroke-width="4" stroke-linecap="round"/></svg>
+          </div>
           <div class="timeline-item">
-            <div class="timeline-year" style="background:#fff;color:#2B2B2B;border:1px solid #E8E3DC">1972</div>
+            <div class="timeline-year" >1972</div>
             <div>
               <p style="font-weight:700;color:var(--dark);margin-bottom:.2rem">Awal Mula</p>
               <p style="font-size:.875rem">Dimulai sebagai bengkel sepeda yang melayani masyarakat Doloksanggul.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year" style="background:#fff;color:#2B2B2B;border:1px solid #E8E3DC">1980</div>
+            <div class="timeline-year" >1980</div>
             <div>
               <p style="font-weight:700;color:var(--dark);margin-bottom:.2rem">Ekspansi ke Motor</p>
               <p style="font-size:.875rem">Berkembang menjadi bengkel motor, mengikuti tren kendaraan bermotor.</p>
             </div>
           </div>
           <div class="timeline-item">
-            <div class="timeline-year" style="background:#fff;color:#2B2B2B;border:1px solid #E8E3DC">2004</div>
+            <div class="timeline-year" >2004</div>
             <div>
               <p style="font-weight:700;color:var(--dark);margin-bottom:.2rem">Fokus Sparepart</p>
               <p style="font-size:.875rem">Bertransformasi jadi toko sparepart terlengkap di Humbang Hasundutan.</p>
@@ -296,6 +302,90 @@
         <p>Konsultasi gratis, langsung dengan tim kami</p>
       </div>
       <a href="#cta" class="btn-cta-now">Hubungi Sekarang &rarr;</a>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="produk-unggulan" class="section-pad" style="background:var(--bg-soft)">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:3rem">
+      <span class="badge merah-soft">PRODUK KAMI</span>
+      <h2 class="section-title lg">Sparepart Pilihan Terbaik</h2>
+      <p class="section-desc">Dari suspensi hingga ban — semua tersedia lengkap dengan kualitas terjamin</p>
+    </div>
+
+    <!-- Baris 1: card besar kiri + 2 kecil kanan -->
+    <div class="produk-hero-grid" style="margin-bottom:1.25rem">
+
+      <div class="produk-card-big">
+        <img src="images/toko/sparepart-collection.jpg" alt="Koleksi Sparepart Lengkap" />
+        <div class="produk-card-overlay"></div>
+        <div class="produk-card-info">
+          <span class="produk-badge">Terlengkap</span>
+          <h3>Ribuan Pilihan Sparepart</h3>
+          <p>Shock absorber, cakram, filter oli, bearing &amp; lebih banyak lagi</p>
+        </div>
+      </div>
+
+      <div class="produk-card-stack">
+        <div class="produk-card-small">
+          <img src="images/toko/sparepart-filter.jpg" alt="Filter Udara Motor" />
+          <div class="produk-card-overlay"></div>
+          <div class="produk-card-info">
+            <span class="produk-badge">Sistem Bahan Bakar</span>
+            <h3>Filter &amp; Intake</h3>
+            <p>Performa optimal dengan filter berkualitas tinggi</p>
+          </div>
+        </div>
+        <div class="produk-card-small">
+          <img src="images/toko/sparepart-tire.jpg" alt="Ban Motor" />
+          <div class="produk-card-overlay"></div>
+          <div class="produk-card-info">
+            <span class="produk-badge">Roda &amp; Ban</span>
+            <h3>Ban &amp; Velg Motor</h3>
+            <p>Semua ukuran &amp; merek ban tersedia lengkap</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Baris 2: 3 card sejajar -->
+    <div class="produk-row3">
+
+      <div class="produk-card-med">
+        <img src="images/toko/produk-oli-kosong.jpg" alt="Wadah Oli Motor" />
+        <div class="produk-card-overlay"></div>
+        <div class="produk-card-info">
+          <span class="produk-badge">Sistem Pelumasan</span>
+          <h3>Wadah &amp; Ukur Oli</h3>
+          <p>Alat ukur presisi untuk pengisian oli yang tepat</p>
+        </div>
+      </div>
+
+      <div class="produk-card-med">
+        <img src="images/toko/produk-federal-oil.jpg" alt="Federal Oil UltraTec" style="object-fit:contain; padding:.75rem; background:#fff" />
+        <div class="produk-card-overlay" style="background:linear-gradient(to top, rgba(180,30,30,.85) 0%, rgba(180,30,30,.15) 60%, transparent 100%)"></div>
+        <div class="produk-card-info">
+          <span class="produk-badge" style="background:#c0392b">Federal Oil</span>
+          <h3>UltraTec 20W-50</h3>
+          <p>Oli mesin unggulan — JASO MA, teruji &amp; terbukti</p>
+        </div>
+      </div>
+
+      <div class="produk-card-med">
+        <img src="images/toko/produk-gir-paket.jpg" alt="Paket Drive Chain Aspira" />
+        <div class="produk-card-overlay"></div>
+        <div class="produk-card-info">
+          <span class="produk-badge">Rantai &amp; Gear</span>
+          <h3>Paket Drive Chain</h3>
+          <p>Gir set + rantai Aspira — jaminan kualitas AHM</p>
+        </div>
+      </div>
+
     </div>
 
   </div>
@@ -492,7 +582,7 @@
         <ul>
           <li><a href="#hero">Beranda</a></li>
           <li><a href="#profile">Profil</a></li>
-          <li><a href="#brands">Produk</a></li>
+          <li><a href="#produk-unggulan">Produk</a></li>
           <li><a href="#cta">Hubungi</a></li>
           <li><a href="#location">Lokasi</a></li>
         </ul>
