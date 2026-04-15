@@ -142,7 +142,7 @@ const catGrid = document.getElementById('cat-grid');
 kategori.forEach(([nama, produk]) => {
   const card = document.createElement('div');
   card.className = 'cat-card';
-  card.innerHTML = `<h4>${nama}</h4><p>${produk}</p>`;
+  card.innerHTML = `<div class="cat-card-body"><h4>${nama}</h4><p>${produk}</p></div>`;
   catGrid.appendChild(card);
 });
 
@@ -201,4 +201,76 @@ kategori.forEach(([nama, produk]) => {
   track.addEventListener('mouseleave', () => { dragging = false; });
 
   gotoSlide(0);
+})();
+
+// ===== REVIEW CAROUSEL =====
+(function() {
+  const track = document.getElementById('review-track');
+  if (!track) return;
+
+  const cards = track.querySelectorAll('.review-card');
+  const dotsWrap = document.getElementById('review-dots');
+  let current = 0;
+
+  // berapa card yang terlihat sekaligus
+  function visibleCount() {
+    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 640)  return 2;
+    return 1;
+  }
+
+  function totalSlides() {
+    return Math.ceil(cards.length / visibleCount());
+  }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (let i = 0; i < totalSlides(); i++) {
+      const b = document.createElement('button');
+      b.className = 'rdot' + (i === current ? ' aktif' : '');
+      b.setAttribute('aria-label', 'Slide ' + (i + 1));
+      b.addEventListener('click', () => goTo(i));
+      dotsWrap.appendChild(b);
+    }
+  }
+
+  function updateDots() {
+    dotsWrap.querySelectorAll('.rdot').forEach((d, i) => {
+      d.classList.toggle('aktif', i === current);
+    });
+  }
+
+  function goTo(idx) {
+    const total = totalSlides();
+    current = Math.max(0, Math.min(idx, total - 1));
+    const vis = visibleCount();
+    const gap = 20; // px, harus sama dengan gap di CSS (1.25rem = 20px)
+    const cardW = (track.parentElement.offsetWidth - gap * (vis - 1)) / vis;
+    const offset = current * vis * (cardW + gap);
+    track.style.transform = `translateX(-${offset}px)`;
+    updateDots();
+  }
+
+  document.getElementById('review-prev').addEventListener('click', () => goTo(current - 1));
+  document.getElementById('review-next').addEventListener('click', () => goTo(current + 1));
+
+  // rebuild saat resize
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      current = 0;
+      buildDots();
+      goTo(0);
+    }, 200);
+  });
+
+  buildDots();
+  goTo(0);
+
+  // auto-play setiap 5 detik
+  setInterval(() => {
+    const next = (current + 1) % totalSlides();
+    goTo(next);
+  }, 5000);
 })();

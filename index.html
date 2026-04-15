@@ -34,8 +34,9 @@
           <a href="#profile">Profil</a>
           <a href="#why-us">Keunggulan</a>
           <a href="#produk-unggulan">Produk</a>
+          <a href="#ulasan">Ulasan</a>
           <a href="#location">Lokasi</a>
-          <a href="#cta" class="btn-hubungi">Hubungi Kami</a>
+          <a href="#cta" class="btn-hubungi">Hubungi</a>
         </nav>
 
         <button id="menu-btn" class="hamburger" aria-label="Toggle menu">
@@ -49,8 +50,9 @@
         <a href="#profile"  onclick="closeMobileNav()">Profil</a>
         <a href="#why-us"   onclick="closeMobileNav()">Keunggulan</a>
         <a href="#brands"   onclick="closeMobileNav()">Produk</a>
+        <a href="#ulasan"   onclick="closeMobileNav()">Ulasan</a>
         <a href="#location" onclick="closeMobileNav()">Lokasi</a>
-        <a href="#cta"      onclick="closeMobileNav()" class="btn-mobile">Hubungi Kami</a>
+        <a href="#cta"      onclick="closeMobileNav()" class="btn-mobile">Hubungi</a>
       </nav>
     </div>
   </div>
@@ -58,17 +60,19 @@
 
 
 <section id="hero">
-  <div class="hero-bg" style="background-image:url('images/toko/background.jpg')"></div>
+  <div class="hero-bg" style="background-image:url('images/toko/background_2.jpg')"></div>
   <div class="hero-overlay-1"></div>
   <div class="hero-overlay-2"></div>
 
   <div class="container hero-inner">
     <div class="hero-grid">
 
-      <div>
+      <!-- KIRI: konten teks -->
+      <div class="hero-content">
+
         <h1 class="hero-title">
           Sparepart Motor<br>
-          <span class="hero-title-gradient">Terlengkap & Terpercaya</span>
+          <span class="hero-title-gradient">Terlengkap &amp; Terpercaya</span>
         </h1>
 
         <p class="hero-desc">
@@ -76,6 +80,20 @@
           dengan harga terbaik di Kabupaten Humbang Hasundutan.
         </p>
 
+        <!-- stats row -->
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <span class="hero-stat-num">50<span class="hero-stat-plus">+</span></span>
+            <span class="hero-stat-label">Tahun Pengalaman</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat">
+            <span class="hero-stat-num">5.0</span>
+            <span class="hero-stat-label">Rating Google</span>
+          </div>
+        </div>
+
+        <!-- checklist -->
         <ul class="hero-list">
           <li>
             <span class="hero-check"><i class="fa-solid fa-check"></i></span>
@@ -87,10 +105,11 @@
           </li>
           <li>
             <span class="hero-check"><i class="fa-solid fa-check"></i></span>
-            <span>Konsultasi Gratis dari Tim</span>
+            <span>Konsultasi Gratis dari Tim Toko</span>
           </li>
         </ul>
 
+        <!-- CTA buttons -->
         <div class="hero-btns">
           <a href="https://wa.me/6285122202802" target="_blank" rel="noopener noreferrer" class="btn-wa">
             <i class="fa-brands fa-whatsapp"></i>
@@ -101,27 +120,59 @@
             Lihat Lokasi
           </a>
         </div>
+
+        <!-- Google rating strip -->
+        <div class="hero-rating-strip">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18" style="flex-shrink:0"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <div class="hero-rating-stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <span class="hero-rating-score">5.0</span>
+          <span class="hero-rating-sep">·</span>
+          <span class="hero-rating-text">Rating Google Maps</span>
+        </div>
+
       </div>
 
-      <div class="hero-photos" style="gap:.75rem">
-        <div class="hero-photo">
-          <img src="images/toko/toko-depan.png" alt="Tampak depan Toko Galumbang"
+      <!-- KANAN: foto cards -->
+      <div class="hero-photos-modern">
+
+        <!-- kartu besar -->
+        <div class="hero-card-big">
+          <img src="images/toko/toko-galumbang.jpg" alt="Toko UD. Galumbang Dolok Sanggul"
             onerror="this.style.display='none'" />
-          <div class="hero-photo-overlay"></div>
-          <div class="hero-photo-text">
-            <p>Toko</p>
-            <p>Lokasi Strategis di Doloksanggul</p>
+          <div class="hero-card-overlay"></div>
+          <div class="hero-card-content">
+            <div class="hero-card-tag"><i class="fa-solid fa-store"></i> Toko Galumbang</div>
+            <p class="hero-card-title">UD. Galumbang Sparepart</p>
+            <p class="hero-card-sub">Jl. Sisingamangaraja No.71, Doloksanggul</p>
           </div>
         </div>
-        <div class="hero-photo">
-          <img src="images/toko/sparepart-spring.jpg" alt="Sparepart Motor Berkualitas"
-            onerror="this.style.display='none'" style="object-position:center center" />
-          <div class="hero-photo-overlay"></div>
-          <div class="hero-photo-text">
-            <p>850+</p>
-            <p>Jenis Sparepart Tersedia</p>
+
+        <!-- dua kartu kecil -->
+        <div class="hero-cards-small">
+          <div class="hero-card-small">
+            <img src="images/toko/sparepart-collection.jpg" alt="Koleksi Sparepart Lengkap"
+              onerror="this.style.display='none'" />
+            <div class="hero-card-overlay"></div>
+            <div class="hero-card-content">
+              <p class="hero-card-num">Stok</p>
+              <p class="hero-card-sub">Selalu Lengkap</p>
+            </div>
+          </div>
+          <div class="hero-card-small">
+            <img src="images/toko/toko-ramai.jpg" alt="Pelanggan Toko"
+              onerror="this.style.display='none'" />
+            <div class="hero-card-overlay"></div>
+            <div class="hero-card-content">
+              <p class="hero-card-num">50+</p>
+              <p class="hero-card-sub">Tahun Melayani</p>
+            </div>
           </div>
         </div>
+
       </div>
 
     </div>
@@ -133,7 +184,7 @@
   <div class="container">
 
     <div class="text-center" style="margin-bottom:3rem">
-      <span class="badge merah-soft">TENTANG KAMI</span>
+      <span class="badge merah-soft">TENTANG</span>
       <h2 class="section-title lg">UD. Galumbang</h2>
       <p class="section-desc">Mitra Terpercaya Suku Cadang Motor Sejak 2004</p>
     </div>
@@ -142,7 +193,7 @@
 
       <!-- kiri: narasi + teks pengalaman -->
       <div class="profile-narasi">
-        <p class="text-lg">
+        <p class="text-lg" style="text-align:justify">
           <span class="text-primary" style="font-size:1.2rem;font-weight:700">UD. Galumbang</span>
           memiliki perjalanan panjang melayani kebutuhan masyarakat di bidang otomotif.
           Berawal dari <span style="font-weight:600;color:var(--secondary)">bengkel sepeda pada tahun 1972</span>,
@@ -160,26 +211,26 @@
             <div class="timeline-year" >1972</div>
             <div>
               <p style="font-weight:700;color:var(--dark);margin-bottom:.2rem">Awal Mula</p>
-              <p style="font-size:.875rem">Dimulai sebagai bengkel sepeda yang melayani masyarakat Doloksanggul.</p>
+              <p style="font-size:.875rem;text-align:justify">Dimulai sebagai bengkel sepeda yang melayani masyarakat Doloksanggul.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year" >1980</div>
             <div>
               <p style="font-weight:700;color:var(--dark);margin-bottom:.2rem">Ekspansi ke Motor</p>
-              <p style="font-size:.875rem">Berkembang menjadi bengkel motor, mengikuti tren kendaraan bermotor.</p>
+              <p style="font-size:.875rem;text-align:justify">Berkembang menjadi bengkel motor, mengikuti tren kendaraan bermotor.</p>
             </div>
           </div>
           <div class="timeline-item">
             <div class="timeline-year" >2004</div>
             <div>
               <p style="font-weight:700;color:var(--dark);margin-bottom:.2rem">Fokus Sparepart</p>
-              <p style="font-size:.875rem">Bertransformasi jadi toko sparepart terlengkap di Humbang Hasundutan.</p>
+              <p style="font-size:.875rem;text-align:justify">Bertransformasi jadi toko sparepart terlengkap di Humbang Hasundutan.</p>
             </div>
           </div>
         </div>
 
-        <p class="text-lg">
+        <p class="text-lg" style="text-align:justify">
           Dengan <strong class="text-primary">lebih dari 50 tahun pengalaman</strong>,
           UD. Galumbang kini menjadi mitra terpercaya bagi pemilik motor, mekanik,
           dan bengkel di Humbang Hasundutan dan sekitarnya.
@@ -224,7 +275,7 @@
         </div>
 
         <blockquote class="galumbang-quote">
-          <p>
+          <p style="text-align:justify">
             <strong class="text-primary" style="font-style:normal">"Galumbang"</strong>
             diambil dari kata Batak yang berarti <strong>gelombang</strong> melambangkan
             semangat usaha yang terus bergerak maju, menjangkau lebih banyak pelanggan,
@@ -242,11 +293,11 @@
 <section id="why-us">
   <div class="container" style="padding-top:2.5rem;padding-bottom:2.5rem">
 
-    <div style="margin-bottom:2.5rem">
-      <span class="badge merah">KEUNGGULAN KAMI</span>
+    <div class="text-center" style="margin-bottom:2.5rem">
+      <span class="badge merah-soft">KEUNGGULAN</span>
       <h2 class="section-title">Kenapa Pilih UD. Galumbang?</h2>
-      <p style="color:var(--muted);max-width:34rem;line-height:1.7">
-        Lebih dari sekadar toko — kami mitra otomotif yang sudah dipercaya warga
+      <p class="section-desc">
+        Lebih dari sekadar toko — mitra otomotif terpercaya warga
         Humbang Hasundutan lebih dari 50 tahun.
       </p>
     </div>
@@ -299,7 +350,7 @@
     <div class="why-cta">
       <div>
         <p>Siap Dapatkan Sparepart Terbaik?</p>
-        <p>Konsultasi gratis, langsung dengan tim kami</p>
+        <p>Konsultasi gratis, langsung dengan tim toko</p>
       </div>
       <a href="#cta" class="btn-cta-now">Hubungi Sekarang &rarr;</a>
     </div>
@@ -312,7 +363,7 @@
   <div class="container">
 
     <div class="text-center" style="margin-bottom:3rem">
-      <span class="badge merah-soft">PRODUK KAMI</span>
+      <span class="badge merah-soft">PRODUK</span>
       <h2 class="section-title lg">Sparepart Pilihan Terbaik</h2>
       <p class="section-desc">Dari suspensi hingga ban — semua tersedia lengkap dengan kualitas terjamin</p>
     </div>
@@ -411,13 +462,16 @@
     </div>
 
     <div style="margin-bottom:2.5rem">
-      <h3 class="sub-judul">Kategori Produk Tersedia</h3>
+      <div class="cat-section-header">
+        <h3 class="sub-judul" style="margin-bottom:0">Kategori Produk Tersedia</h3>
+        <p class="sub-desc">Semua kebutuhan suku cadang motor dalam satu toko</p>
+      </div>
       <div class="cat-grid" id="cat-grid"></div>
     </div>
 
     <div class="brands-cta">
       <p>Tidak Menemukan yang Anda Cari?</p>
-      <p>Hubungi kami! Kami siap membantu mencari sparepart yang Anda butuhkan</p>
+      <p>Siap membantu mencari sparepart yang Anda butuhkan</p>
       <a href="https://wa.me/6285122202802" target="_blank" rel="noopener noreferrer" class="btn-wa-white">
         Chat WhatsApp
       </a>
@@ -428,46 +482,80 @@
 
 
 <section id="cta">
-  <div class="container" style="padding-top:2.5rem;padding-bottom:2.5rem">
+  <div class="cta-inner-wrap">
 
-    <div class="text-center" style="margin-bottom:2.5rem">
-      <h2 style="font-size:1.5rem;font-weight:800;color:#fff;margin-bottom:.75rem">
-        Butuh Sparepart Motor?
-      </h2>
-      <p style="color:rgba(255,255,255,.6);max-width:30rem;margin:0 auto">
-        Hubungi kami sekarang — konsultasi gratis, harga terbaik,
-        pengiriman ke seluruh Humbang Hasundutan.
+    <!-- Judul -->
+    <div class="cta-header">
+      <span class="cta-eyebrow">HUBUNGI</span>
+      <h2 class="cta-title">Butuh Sparepart Motor?</h2>
+      <p class="cta-subtitle">
+        Konsultasi gratis, harga terbaik, pengiriman ke seluruh Humbang Hasundutan.
       </p>
     </div>
 
-    <div class="cta-grid">
-      <a href="https://wa.me/6285122202802" target="_blank" rel="noopener noreferrer"
-        class="cta-card" style="background:#25D366">
-        <i class="fa-brands fa-whatsapp" style="font-size:1.5rem"></i>
-        <p class="nama">WhatsApp</p>
-        <p class="detail">0851-2220-2802</p>
+    <!-- Kontak Cards -->
+    <div class="cta-cards-row">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/6285122202802" target="_blank" rel="noopener noreferrer" class="cta-contact-card cta-wa">
+        <div class="cta-card-icon">
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+        <div class="cta-card-body">
+          <p class="cta-card-label">Chat WhatsApp</p>
+          <p class="cta-card-value">0851-2220-2802</p>
+          <p class="cta-card-hint">Respon cepat · 24 jam</p>
+        </div>
+        <div class="cta-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="tel:085122202802" class="cta-card" style="background:#8B7355">
-        <i class="fa-solid fa-phone" style="font-size:1.5rem"></i>
-        <p class="nama">Telepon</p>
-        <p class="detail">0851-2220-2802</p>
+
+      <!-- Telepon -->
+      <a href="tel:085122202802" class="cta-contact-card cta-telp">
+        <div class="cta-card-icon">
+          <i class="fa-solid fa-phone"></i>
+        </div>
+        <div class="cta-card-body">
+          <p class="cta-card-label">Telepon Langsung</p>
+          <p class="cta-card-value">0851-2220-2802</p>
+          <p class="cta-card-hint">Senin–Sabtu · 08.00–18.30</p>
+        </div>
+        <div class="cta-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
       </a>
-      <a href="mailto:galumbangspareparts@gmail.com" class="cta-card" style="background:#8B2E3C">
-        <i class="fa-solid fa-envelope" style="font-size:1.5rem"></i>
-        <p class="nama">Email</p>
-        <p class="detail">galumbangspareparts@gmail.com</p>
+
+      <!-- Email -->
+      <a href="mailto:tokogalumbang@gmail.com" class="cta-contact-card cta-email">
+        <div class="cta-card-icon">
+          <i class="fa-solid fa-envelope"></i>
+        </div>
+        <div class="cta-card-body">
+          <p class="cta-card-label">Kirim Email</p>
+          <p class="cta-card-value">tokogalumbang@gmail.com</p>
+          <p class="cta-card-hint">Balas dalam 1×24 jam</p>
+        </div>
+        <div class="cta-card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
       </a>
+
     </div>
 
-    <div class="jam-box">
-      <p class="title">Jam Operasional</p>
-      <div class="jam-row">
-        <span>Senin – Sabtu</span>
-        <span>08.00 – 18.30 WIB</span>
+    <!-- Jam Operasional -->
+    <div class="cta-jam-modern">
+      <div class="cta-jam-icon">
+        <i class="fa-regular fa-clock"></i>
       </div>
-      <div class="jam-row">
-        <span>Minggu</span>
-        <span>Tutup</span>
+      <div class="cta-jam-content">
+        <p class="cta-jam-title">Jam Operasional</p>
+        <div class="cta-jam-rows">
+          <div class="cta-jam-row">
+            <span class="cta-jam-day">Senin – Sabtu</span>
+            <span class="cta-jam-divider"></span>
+            <span class="cta-jam-time">08.00 – 18.30 WIB</span>
+          </div>
+          <div class="cta-jam-row">
+            <span class="cta-jam-day">Minggu</span>
+            <span class="cta-jam-divider"></span>
+            <span class="cta-jam-time cta-tutup">Tutup</span>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -475,85 +563,318 @@
 </section>
 
 
-<section id="location" class="section-pad">
+<!-- ===== ULASAN PELANGGAN ===== -->
+<section id="ulasan" class="section-pad" style="background:var(--bg-soft)">
+  <div class="container">
+
+    <div class="text-center" style="margin-bottom:3rem">
+      <span class="badge merah-soft">ULASAN PELANGGAN</span>
+      <h2 class="section-title lg">Ulasan Pelanggan</h2>
+      <p class="section-desc">Kepercayaan ribuan pelanggan adalah kebanggaan terbesar</p>
+
+      <!-- Rating summary -->
+      <div class="rating-summary">
+        <div class="rating-score">5.0</div>
+        <div class="rating-stars-big">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="rating-label">Rating di Google Maps</p>
+        <a href="https://www.google.com/maps/place/Toko+Galumbang+Spareparts" target="_blank" rel="noopener noreferrer" class="gmaps-badge">
+          <img src="https://www.gstatic.com/images/branding/product/1x/maps_48dp.png" alt="Google Maps" style="height:1.1rem;width:auto;" />
+          <span>Lihat di Google Maps</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Carousel ulasan -->
+    <div class="review-carousel-wrap">
+      <div class="review-track" id="review-track">
+
+        <!-- define reusable Google G icon -->
+        <!-- Ulasan 1: Rogen bagas Smg -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#2d2d2d,#555)">R</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Rogen bagas Smg</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Sangat recommended belanja disini, pelayanannya pun mantap 👍</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 2: Angel -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#8B2E3C,#c0392b)">A</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Angel</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Toko menjual sparepart motor lengkap, bisa konsultasi, terpercaya.</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 3: Family Sidabalok -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#1a6b3c,#27ae60)">F</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Family Sidabalok</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Harga oke, pelayanannya cepat.</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 4: rusdin Sihotang -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#c0392b,#8B2E3C)">r</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">rusdin Sihotang</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Barangnya lengkap dan pelayanannya ramah.</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 5: Rizky Saragi -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#7B3F9E,#9b59b6)">R</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Rizky Saragi</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Lengkap.</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 6: Yoga Lepi Berasa -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#d35400,#e67e22)">Y</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Yoga Lepi Berasa</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">⭐⭐⭐⭐⭐</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 7: RafikoAlfahri Purba -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-photo">
+              <img src="https://ui-avatars.com/api/?name=Rafiko+Alfahri&background=8B2E3C&color=fff&bold=true&size=64" alt="RafikoAlfahri Purba" />
+            </div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">RafikoAlfahri Purba</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Sangat bagus, lengkap, dan cepat.</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 8: Yandri Sihombing -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#27ae60,#1a8a4a)">Y</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Yandri Sihombing</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Barangnya bagus, harga terjangkau pokoknya mantaplah.</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+        <!-- Ulasan 9: Ibnu Chalik -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="reviewer-avatar avatar-initial" style="background:linear-gradient(135deg,#8B2E3C,#c0392b)">I</div>
+            <div class="reviewer-info">
+              <p class="reviewer-name">Ibnu Chalik</p>
+              <div class="review-stars">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <div class="gmaps-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg></div>
+          </div>
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <p class="review-text">Sparepart cukup lengkap, harga masih terjangkau, pelayanan cepat dan ramah.</p>
+          <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Ulasan Terverifikasi Google</div>
+        </div>
+
+      </div><!-- /review-track -->
+
+      <!-- Navigasi panah -->
+      <button class="review-btn review-prev" id="review-prev" aria-label="Sebelumnya">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <button class="review-btn review-next" id="review-next" aria-label="Berikutnya">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <!-- Dots -->
+      <div class="review-dots" id="review-dots"></div>
+    </div>
+
+    <div class="text-center" style="margin-top:2.5rem">
+      <a href="https://www.google.com/maps/place/Toko+Galumbang+Spareparts/@2.2581874,98.7466712,17z" target="_blank" rel="noopener noreferrer" class="btn-tulis-ulasan">
+        <i class="fa-brands fa-google"></i>
+        Tulis Ulasan di Google Maps
+      </a>
+    </div>
+
+  </div>
+</section>
+<!-- ===== END ULASAN ===== -->
+
+
+<section id="location" class="section-pad" style="background:var(--bg-soft)">
   <div class="container">
 
     <div class="text-center" style="margin-bottom:2.5rem">
       <span class="badge merah-soft">LOKASI TOKO</span>
-      <h2 class="section-title">Kunjungi Toko Kami</h2>
+      <h2 class="section-title">Kunjungi Toko</h2>
       <p class="section-desc">
         Jl. Sisingamangaraja No. 71, Doloksanggul — mudah ditemukan, parkir luas
       </p>
     </div>
 
     <div class="loc-grid">
+
+      <!-- Peta -->
       <div class="map-wrap">
-        <!-- ganti src iframe ini dengan embed URL dari Google Maps -->
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15928.45!2d98.7466712!3d2.2581874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x302e3b1f33703d05%3A0xcc772fb028726ab2!2sToko%20Galumbang%20Spareparts!5e0!3m2!1sid!2sid!4v1680000000000!5m2!1sid!2sid"
           allowfullscreen loading="lazy"
           title="Lokasi Toko Galumbang Spareparts, Doloksanggul"
           referrerpolicy="no-referrer-when-downgrade">
         </iframe>
-        <div class="map-footer">
-          <p>Jl. Sisingamangaraja No. 71, Doloksanggul</p>
-        </div>
       </div>
 
+      <!-- Info panel -->
       <div class="loc-info">
-        <div class="loc-card">
-          <div class="loc-card-inner">
-            <i class="fa-solid fa-location-dot" style="color:var(--primary);margin-top:.2rem;flex-shrink:0"></i>
-            <div>
-              <p class="loc-title">Alamat Lengkap</p>
-              <address>
-                Jl. Sisingamangaraja No. 71<br>
-                Kel. Pasar Doloksanggul<br>
-                Kec. Doloksanggul<br>
-                Kab. Humbang Hasundutan<br>
-                Sumatera Utara
-              </address>
-            </div>
+
+        <!-- Alamat -->
+        <div class="loc-info-card">
+          <div class="loc-info-icon" style="background:rgba(139,46,60,.1);color:var(--primary)">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+          <div>
+            <p class="loc-info-label">Alamat</p>
+            <address class="loc-info-value">
+              Jl. Sisingamangaraja No. 71<br>
+              Doloksanggul, Humbang Hasundutan<br>
+              Sumatera Utara
+            </address>
           </div>
         </div>
 
-        <div class="loc-card merah">
-          <div class="loc-card-inner">
-            <i class="fa-regular fa-clock" style="flex-shrink:0;margin-top:.2rem;opacity:.85"></i>
-            <div style="flex:1">
-              <p class="loc-title">Jam Buka</p>
-              <div class="loc-jam">
-                <div class="loc-jam-row">
-                  <span>Senin – Sabtu</span><span>08.00 – 18.30</span>
-                </div>
-                <div class="loc-jam-row">
-                  <span>Minggu</span><span>Tutup</span>
-                </div>
+        <!-- Jam Buka -->
+        <div class="loc-info-card">
+          <div class="loc-info-icon" style="background:rgba(139,115,85,.1);color:var(--secondary)">
+            <i class="fa-regular fa-clock"></i>
+          </div>
+          <div style="flex:1">
+            <p class="loc-info-label">Jam Operasional</p>
+            <div class="loc-jam-modern">
+              <div class="loc-jam-modern-row">
+                <span>Senin – Sabtu</span>
+                <span class="loc-jam-time">08.00 – 18.30 WIB</span>
+              </div>
+              <div class="loc-jam-modern-row">
+                <span>Minggu</span>
+                <span class="loc-jam-tutup">Tutup</span>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="loc-card gelap">
-          <div class="loc-card-inner">
-            <i class="fa-solid fa-phone" style="flex-shrink:0;margin-top:.2rem;opacity:.7"></i>
-            <div>
-              <p class="loc-title">Kontak</p>
-              <a href="tel:085122202802" class="loc-link">
-                0851-2220-2802
-              </a>
-              <a href="mailto:galumbangspareparts@gmail.com" class="loc-link kecil">
-                galumbangspareparts@gmail.com
-              </a>
-            </div>
+        <!-- Kontak -->
+        <div class="loc-info-card">
+          <div class="loc-info-icon" style="background:rgba(43,43,43,.08);color:var(--dark)">
+            <i class="fa-solid fa-phone"></i>
+          </div>
+          <div>
+            <p class="loc-info-label">Kontak</p>
+            <a href="tel:085122202802" class="loc-contact-link">0851-2220-2802</a>
+            <a href="mailto:tokogalumbang@gmail.com" class="loc-contact-link small">tokogalumbang@gmail.com</a>
           </div>
         </div>
 
+        <!-- Tombol Maps -->
         <a href="https://maps.app.goo.gl/58e7Y6N73odRPMMs8"
-          target="_blank" rel="noopener noreferrer" class="btn-maps">
-          <i class="fa-solid fa-diamond-turn-right"></i>
-          Buka di Google Maps
+          target="_blank" rel="noopener noreferrer" class="btn-maps-modern">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="18" height="18" style="flex-shrink:0"><path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#34A853" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#EA4335" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+          <span>Buka di Google Maps</span>
+          <i class="fa-solid fa-arrow-up-right-from-square" style="font-size:.75rem;margin-left:auto;opacity:.6"></i>
         </a>
+
       </div>
     </div>
 
@@ -597,7 +918,7 @@
           </li>
           <li>
             <i class="fa-solid fa-envelope" style="flex-shrink:0;margin-top:.15rem"></i>
-            <a href="mailto:galumbangspareparts@gmail.com">galumbangspareparts@gmail.com</a>
+            <a href="mailto:tokogalumbang@gmail.com">tokogalumbang@gmail.com</a>
           </li>
           <li>
             <i class="fa-solid fa-location-dot" style="flex-shrink:0;margin-top:.15rem"></i>
@@ -627,7 +948,7 @@
     <button class="close-btn" onclick="tutupTooltip()" aria-label="Tutup">
       <i class="fa-solid fa-xmark"></i>
     </button>
-    <p class="bold">Ada yang bisa kami bantu?</p>
+    <p class="bold">Ada yang bisa dibantu?</p>
     <p class="kecil">Chat langsung untuk konsultasi sparepart!</p>
   </div>
   <a href="https://wa.me/6285122202802" target="_blank" rel="noopener noreferrer"
