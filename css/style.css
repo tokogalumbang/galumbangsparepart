@@ -2059,3 +2059,41 @@ p, h1, h2, h3, h4, address, blockquote {
   background: #f8f9ff;
   color: #1a73e8;
 }
+
+/* ===== SPAREPART VISUAL — Motion GIF ===== */
+.sp-motion-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .sp-motion-grid { grid-template-columns: 1.15fr 1fr; gap: 2.5rem; }
+}
+.sp-motion-gifwrap { display: flex; flex-direction: column; }
+.sp-motion-frame {
+  position: relative; border-radius: 1rem; overflow: hidden;
+  background: #f4f1ed;
+  box-shadow: 0 8px 36px rgba(139,46,60,.13), 0 2px 8px rgba(0,0,0,.07);
+  border: 1px solid #e6e0d8;
+}
+.sp-motion-img { width: 100%; display: block; border-radius: 1rem; }
+.sp-mc { position: absolute; width: 18px; height: 18px; z-index: 4; }
+.sp-mc-tl { top:8px; left:8px; border-top:2px solid var(--primary); border-left:2px solid var(--primary); }
+.sp-mc-tr { top:8px; right:8px; border-top:2px solid var(--primary); border-right:2px solid var(--primary); }
+.sp-mc-bl { bottom:8px; left:8px; border-bottom:2px solid var(--primary); border-left:2px solid var(--primary); }
+.sp-mc-br { bottom:8px; right:8px; border-bottom:2px solid var(--primary); border-right:2px solid var(--primary); }
+.sp-motion-bar { position:absolute; left:0; top:0; bottom:0; width:4px; background:var(--primary); z-index:4; }
+.sp-motion-info { display: flex; flex-direction: column; }
+.sp-komp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .45rem .75rem; }
+.sp-komp-item { display:flex; align-items:center; gap:.5rem; font-size:.82rem; color:var(--dark-med); }
+.sp-komp-dot { width:7px; height:7px; border-radius:50%; background:var(--primary); flex-shrink:0; }
+.sp-motion-cta {
+  display:inline-flex; align-items:center; gap:.6rem;
+  background:var(--primary); color:#fff;
+  padding:.75rem 1.5rem; border-radius:.6rem;
+  font-size:.9rem; font-weight:700; text-decoration:none;
+  transition:background .2s, transform .15s; width:fit-content;
+}
+.sp-motion-cta:hover { background:var(--primary-dark); transform:translateY(-1px); }
+/* ===== END ===== */
