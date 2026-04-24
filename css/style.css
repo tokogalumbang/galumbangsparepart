@@ -433,12 +433,16 @@ section, footer, header {
   display: grid; gap: 2.5rem; align-items: start;
   margin-bottom: 0;
 }
-@media (min-width: 1024px) { .profile-grid { grid-template-columns: 1fr 1fr; align-items: start; } }
+@media (min-width: 1024px) { .profile-grid { grid-template-columns: 1.4fr 1fr; align-items: start; } }
 
 .profile-narasi {
   display: flex; flex-direction: column; gap: 1rem;
   color: var(--muted); line-height: 1.75;
   min-width: 0; overflow: hidden;
+}
+.profile-narasi .text-lg {
+  text-align: justify;
+  hyphens: auto;
 }
 
 /* ---- TIMELINE REDESIGN ---- */
@@ -1754,7 +1758,7 @@ p, h1, h2, h3, h4, address, blockquote {
 @media (min-width: 1024px) and (max-width: 1199px) {
   .hero-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
   .hero-photo { height: 200px; }
-  .profile-grid { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .profile-grid { grid-template-columns: 1.4fr 1fr; gap: 2.5rem; }
   .section-pad { padding-top: 3.5rem; padding-bottom: 3rem; }
   .why-grid { grid-template-columns: repeat(3,1fr); gap: 1rem; }
 }
@@ -2091,3 +2095,116 @@ p, h1, h2, h3, h4, address, blockquote {
 }
 .sp-motion-cta:hover { background:var(--primary-dark); transform:translateY(-1px); }
 /* ===== END ===== */
+
+/* ===== REVIEW RESPONSIVE IMPROVEMENTS ===== */
+/* Mobile: kartu lebih nyaman, tombol tidak terpotong */
+@media (max-width: 480px) {
+  .review-carousel-wrap {
+    padding: 0 2rem; /* beri ruang untuk tombol prev/next */
+  }
+  .review-card {
+    padding: 1.25rem;
+    border-radius: 1rem;
+  }
+  .review-prev { left: -1rem !important; }
+  .review-next { right: -1rem !important; }
+  .reviewer-name { font-size: .85rem; }
+  .review-text { font-size: .88rem; line-height: 1.6; }
+  .review-verified { font-size: .72rem; }
+}
+
+/* Pastikan track tidak overflow di semua ukuran */
+.review-track {
+  min-height: 180px; /* hindari layout jump saat loading */
+}
+
+/* Loading spinner center */
+.review-track > div[style*="spinner"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ===== LOKASI DALAM SECTION HUBUNGI ===== */
+.cta-loc-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin: 3rem 0 0;
+}
+
+.cta-loc-wrap {
+  width: 100%;
+  padding: 3rem 0 1rem;
+}
+
+.cta-loc-wrap .section-title {
+  color: #fff;
+}
+
+.cta-loc-wrap .section-desc {
+  color: rgba(255,255,255,0.7);
+}
+
+.cta-loc-wrap .badge {
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.9);
+}
+
+/* Info cards dalam CTA tetap terang */
+.cta-loc-wrap .loc-info-card {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.cta-loc-wrap .loc-info-label {
+  color: rgba(255,255,255,0.6);
+}
+
+.cta-loc-wrap .loc-info-value,
+.cta-loc-wrap address {
+  color: #fff;
+}
+
+.cta-loc-wrap .loc-contact-link {
+  color: rgba(255,255,255,0.85);
+}
+
+.cta-loc-wrap .loc-contact-link:hover {
+  color: #fff;
+}
+
+.cta-loc-wrap .loc-info-icon {
+  background: rgba(255,255,255,0.15) !important;
+  color: #fff !important;
+}
+
+.cta-loc-wrap .loc-jam-modern-row span:first-child {
+  color: rgba(255,255,255,0.75);
+}
+
+.cta-loc-wrap .loc-jam-time {
+  color: #fff;
+}
+
+.cta-loc-wrap .loc-jam-tutup {
+  color: rgba(255,200,200,0.9);
+}
+
+.cta-loc-wrap .btn-maps-modern {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.25);
+}
+
+.cta-loc-wrap .btn-maps-modern:hover {
+  background: rgba(255,255,255,0.25);
+}
+
+/* Map iframe tetap tampil normal */
+.cta-loc-wrap .map-wrap iframe {
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+}
