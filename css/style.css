@@ -430,13 +430,11 @@ section, footer, header {
 #profile { background: var(--bg-soft); padding-bottom: 2.5rem; }
 
 .profile-intro-full {
-  margin-bottom: 1.5rem;
-}
-.profile-intro-full .text-lg {
   text-align: justify;
   hyphens: auto;
   color: var(--muted);
   line-height: 1.75;
+  margin-bottom: 1.5rem;
 }
 
 .profile-grid {
