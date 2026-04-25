@@ -1097,14 +1097,16 @@ section, footer, header {
 /* Jam Operasional */
 .cta-jam-modern {
   max-width: 28rem;
+  width: 100%;
   margin: 0 auto;
   background: var(--bg-soft);
   border: 1.5px solid var(--border);
   border-radius: 1rem;
-  padding: 1.5rem 1.75rem;
+  padding: 1.25rem 1.5rem;
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  box-sizing: border-box;
 }
 .cta-jam-icon {
   width: 2.5rem; height: 2.5rem;
@@ -1116,7 +1118,7 @@ section, footer, header {
   flex-shrink: 0;
   margin-top: .15rem;
 }
-.cta-jam-content { flex: 1; }
+.cta-jam-content { flex: 1; min-width: 0; }
 .cta-jam-title {
   font-weight: 700;
   color: var(--dark);
@@ -1127,16 +1129,18 @@ section, footer, header {
 .cta-jam-row {
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: .5rem;
   font-size: .875rem;
+  flex-wrap: nowrap;
 }
-.cta-jam-day { color: var(--dark); font-weight: 500; min-width: 9rem; }
+.cta-jam-day { color: var(--dark); font-weight: 500; white-space: nowrap; flex-shrink: 0; }
 .cta-jam-divider {
   flex: 1;
   height: 1px;
   background: var(--border);
+  min-width: .5rem;
 }
-.cta-jam-time { color: var(--muted); font-weight: 500; }
+.cta-jam-time { color: var(--muted); font-weight: 500; white-space: nowrap; flex-shrink: 0; }
 .cta-tutup {
   color: var(--primary);
   font-weight: 700;
@@ -2123,7 +2127,7 @@ p, h1, h2, h3, h4, address, blockquote {
 
 /* Pastikan track tidak overflow di semua ukuran */
 .review-track {
-  min-height: 180px; /* hindari layout jump saat loading */
+  min-height: 60px; /* hindari layout jump saat loading */
 }
 
 /* Loading spinner center */
