@@ -158,10 +158,6 @@ kategori.forEach(([nama, produk]) => {
 })();
 
 
-// =================================================================
-// ===== DYNAMIC REVIEW CAROUSEL — load dari reviews.json =====
-// Cara update ulasan: HANYA edit file reviews.json, push ke GitHub
-// =================================================================
 (function() {
   const GOOGLE_G = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22">
     <path fill="#4285F4" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/>
@@ -257,7 +253,6 @@ kategori.forEach(([nama, produk]) => {
     track.addEventListener('mouseleave', () => startAuto());
   }
 
-  // Data bawaan — render LANGSUNG tanpa loading delay
   const fallback = [
     { name: 'Rogen bagas Smg',    rating: 5, text: 'Sangat recommended belanja disini, pelayanannya pun mantap 👍' },
     { name: 'RafikoAlfahri Purba',rating: 5, text: 'Sangat bagus, lengkap, dan cepat.' },
@@ -270,18 +265,17 @@ kategori.forEach(([nama, produk]) => {
     { name: 'Yoga Lepi Berasa',   rating: 5, text: 'Pelayanan sangat memuaskan, stok lengkap!' },
   ];
 
-  // Render langsung pakai data bawaan — tidak ada loading delay
+  
   initCarousel(fallback);
 
-  // Background fetch reviews.json (untuk update di GitHub Pages)
   const bust = `?v=${Math.floor(Date.now() / 3600000)}`;
   fetch(`reviews.json${bust}`)
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(data => {
       if (!Array.isArray(data) || !data.length) return;
-      initCarousel(data); // update dengan data terbaru dari JSON
+      initCarousel(data)
     })
     .catch(() => { /* diam-diam, fallback sudah tampil */ });
 
 })();
-// ===== END REVIEW CAROUSEL =====
+
