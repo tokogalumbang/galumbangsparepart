@@ -2220,3 +2220,399 @@ p, h1, h2, h3, h4, address, blockquote {
   border-radius: 1rem;
   box-shadow: 0 8px 32px rgba(0,0,0,0.25);
 }
+
+
+/* ============================================================
+   REVISI: CTA Section — WA sebagai primary button dominan
+   ============================================================ */
+.cta-wa-primary-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+.cta-wa-primary-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #25D366;
+  color: #fff;
+  padding: 1.15rem 2rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+  box-shadow: 0 6px 24px rgba(37,211,102,.4);
+  transition: background .2s, transform .2s, box-shadow .2s;
+  width: 100%;
+  max-width: 26rem;
+}
+.cta-wa-primary-btn:hover {
+  background: #1ebd5b;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(37,211,102,.5);
+}
+.cta-wa-primary-btn .fa-whatsapp {
+  font-size: 2.25rem;
+  flex-shrink: 0;
+}
+.cta-wa-primary-btn span {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  line-height: 1.35;
+}
+.cta-wa-primary-btn strong { font-size: 1.05rem; }
+.cta-wa-primary-btn small  { font-size: .8rem; opacity: .85; font-weight: 400; }
+.cta-atau {
+  text-align: center;
+  color: var(--muted);
+  font-size: .85rem;
+  margin-bottom: 1rem;
+}
+/* Kontak alternatif 2 kolom */
+.cta-alt-row {
+  grid-template-columns: 1fr 1fr !important;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 560px) {
+  .cta-alt-row { grid-template-columns: 1fr !important; }
+  .cta-wa-primary-btn { max-width: 100%; padding: 1rem 1.25rem; }
+}
+
+
+/* ================================================================
+   RESPONSIVE — GALUMBANG SPAREPART
+   Breakpoints:
+     xs  : <  480px  (HP kecil)
+     sm  : 480–639px (HP besar)
+     md  : 640–767px (HP landscape / tablet kecil)
+     lg  : 768–1023px (tablet)
+     xl  : 1024–1279px (laptop kecil)
+     2xl : 1280px+   (desktop)
+   Strategi: mobile-first, CTA WA selalu mudah dijangkau
+   ================================================================ */
+
+/* ── 0. RESET OVERFLOW HORIZONTAL ──────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
+html, body { overflow-x: hidden; max-width: 100%; }
+img, iframe, video { max-width: 100%; }
+
+/* ── 1. NAVIGATION ──────────────────────────────────────────────── */
+
+/* Mobile nav: item lebih tinggi agar mudah di-tap */
+@media (max-width: 767px) {
+  #mobile-nav a {
+    padding: .75rem 1rem;
+    font-size: .925rem;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  #mobile-nav .btn-mobile {
+    min-height: 48px;
+    font-size: .95rem;
+    border-radius: .625rem;
+    margin-top: .5rem;
+  }
+  .hamburger {
+    min-width: 44px;
+    min-height: 44px;
+    font-size: 1.35rem;
+  }
+  .logo-box img { height: 1.6rem; }
+}
+
+/* ── 2. HERO ────────────────────────────────────────────────────── */
+
+/* xs: < 480px */
+@media (max-width: 479px) {
+  #hero { padding-top: 4.5rem; padding-bottom: 2.5rem; }
+  .hero-title { font-size: 1.85rem !important; line-height: 1.15; }
+  .hero-desc  { font-size: .9rem; margin-bottom: 1.25rem; }
+  .hero-stats { padding: .7rem 1rem; gap: 0; }
+  .hero-stat  { padding: 0 .875rem; }
+  .hero-stat-num { font-size: 1.25rem; }
+  .hero-list { gap: .45rem; margin-bottom: 1.5rem; }
+  .hero-list > li > span:last-child { font-size: .85rem; }
+  .hero-photos-modern { display: none; }
+  .hero-btns {
+    flex-direction: column !important;
+    gap: .625rem;
+    margin-bottom: 1.25rem;
+  }
+  .btn-wa {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    min-height: 52px;
+    border-radius: .875rem;
+  }
+  .btn-lokasi {
+    width: 100%;
+    justify-content: center;
+    padding: .875rem 1.25rem;
+    font-size: .9rem;
+    min-height: 48px;
+  }
+}
+
+/* sm: 480–767px */
+@media (min-width: 480px) and (max-width: 767px) {
+  .hero-title { font-size: 2.25rem !important; }
+  .hero-photos-modern { display: none; }
+  .hero-btns { flex-direction: row !important; flex-wrap: wrap; gap: .75rem; }
+  .btn-wa   { min-height: 48px; }
+  .btn-lokasi { min-height: 48px; }
+}
+
+/* md+: hero foto tampil kembali */
+@media (min-width: 768px) {
+  .hero-photos-modern { display: flex; }
+}
+
+/* ── 3. TENTANG / PROFILE ──────────────────────────────────────── */
+
+@media (max-width: 1023px) {
+  .profile-grid { grid-template-columns: 1fr !important; gap: 1.75rem; }
+  .carousel-kolom { display: none; } /* sembunyikan carousel foto di mobile & tablet */
+  .profile-intro-full { font-size: 1rem; }
+  .timeline-box { padding: 1.25rem; }
+  .timeline-item { padding: .75rem 0; }
+}
+
+@media (max-width: 479px) {
+  .timeline-year { font-size: .72rem; min-width: 2.8rem; }
+  .galumbang-quote { font-size: .9rem; }
+}
+
+/* ── 4. KEUNGGULAN ──────────────────────────────────────────────── */
+
+/* xs: 1 kolom */
+@media (max-width: 479px) {
+  .why-grid {
+    grid-template-columns: 1fr !important;
+    gap: .75rem;
+  }
+  .why-card { padding: 1.1rem 1rem; }
+  .why-card h3 { font-size: .9rem; }
+  .why-card p  { font-size: .8rem; }
+  .why-icon { width: 2.5rem !important; height: 2.5rem !important; font-size: .875rem !important; }
+}
+
+/* sm–md: 2 kolom */
+@media (min-width: 480px) and (max-width: 1023px) {
+  .why-grid { grid-template-columns: 1fr 1fr !important; gap: .875rem; }
+  .why-card { padding: 1.25rem; }
+  .why-card h3 { font-size: .9rem; }
+  .why-card p  { font-size: .8rem; }
+}
+
+/* ── 5. PRODUK UNGGULAN ─────────────────────────────────────────── */
+
+/* xs: semua kartu satu kolom, height dikurangi */
+@media (max-width: 479px) {
+  .produk-hero-grid  { grid-template-columns: 1fr !important; }
+  .produk-card-stack { flex-direction: column !important; gap: .75rem; }
+  .produk-card-big   { height: 200px !important; }
+  .produk-card-small { height: 180px !important; }
+  .produk-row3       { grid-template-columns: 1fr !important; gap: .75rem; }
+  .produk-card-med   { height: 180px !important; }
+  .produk-card-info h3 { font-size: .85rem; }
+  .produk-card-info p  { font-size: .75rem; }
+  .produk-badge        { font-size: .6rem; padding: .2rem .5rem; }
+}
+
+/* sm–md: 2 kolom untuk row3, hero tetap 1 kolom */
+@media (min-width: 480px) and (max-width: 767px) {
+  .produk-hero-grid  { grid-template-columns: 1fr !important; }
+  .produk-card-stack { flex-direction: row !important; gap: .75rem; }
+  .produk-card-big   { height: 240px !important; }
+  .produk-card-small { height: 190px !important; }
+  .produk-row3       { grid-template-columns: 1fr 1fr !important; gap: .75rem; }
+  .produk-card-med   { height: 190px !important; }
+}
+
+/* lg tablet: hero 2 kolom mulai tampil */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .produk-card-big   { height: 340px; }
+  .produk-card-small { height: 155px; }
+  .produk-card-med   { height: 210px; }
+  .produk-row3       { grid-template-columns: 1fr 1fr !important; }
+}
+
+/* sp-motion-grid dalam section produk */
+@media (max-width: 767px) {
+  .sp-motion-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem;
+  }
+  .sp-komp-grid { grid-template-columns: 1fr 1fr; gap: .4rem .6rem; }
+  .sp-komp-item { font-size: .78rem; }
+  .sp-motion-cta {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+    font-size: .95rem;
+  }
+}
+
+/* ── 6. MEREK SPAREPART ─────────────────────────────────────────── */
+@media (max-width: 479px) {
+  .brand-item { width: 6.5rem; }
+  .brand-card { height: 90px; padding: .6rem; }
+  .brand-icon { width: 2.25rem; height: 2.25rem; }
+  .brand-card p { font-size: .68rem; }
+}
+
+/* ── 7. LOKASI ──────────────────────────────────────────────────── */
+@media (max-width: 1023px) {
+  .loc-grid { grid-template-columns: 1fr !important; gap: 1.25rem; }
+}
+@media (max-width: 479px) {
+  .map-wrap iframe { height: 220px; }
+  .loc-info-card { padding: .875rem 1rem; gap: .65rem; }
+  .loc-info-icon { width: 2rem; height: 2rem; font-size: .8rem; }
+  .loc-info-value { font-size: .825rem; }
+  .btn-maps-modern {
+    width: 100%;
+    justify-content: center;
+    min-height: 48px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .map-wrap iframe { height: 280px; }
+  .btn-maps-modern { min-height: 48px; }
+}
+
+/* ── 8. ULASAN ──────────────────────────────────────────────────── */
+@media (max-width: 479px) {
+  .rating-score { font-size: 3rem; }
+  .review-carousel-wrap { padding: 0 2.25rem; }
+  .review-card { padding: 1.1rem; }
+  .reviewer-name { font-size: .85rem; }
+  .review-text  { font-size: .85rem; line-height: 1.65; }
+  .review-stars i { font-size: .75rem; }
+  .review-verified { font-size: .7rem; }
+  .review-prev { left: -.875rem !important; }
+  .review-next { right: -.875rem !important; }
+  .btn-tulis-ulasan {
+    width: 100%;
+    justify-content: center;
+    font-size: .85rem;
+    padding: .875rem 1rem;
+    min-height: 48px;
+  }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .review-carousel-wrap { padding: 0 2.5rem; }
+  .btn-tulis-ulasan { min-height: 48px; }
+}
+
+/* ── 9. SECTION CTA HUBUNGI ─────────────────────────────────────── */
+@media (max-width: 479px) {
+  .cta-wa-primary-btn {
+    max-width: 100% !important;
+    padding: 1rem 1.1rem !important;
+    font-size: .95rem;
+    min-height: 56px;
+    gap: .75rem;
+  }
+  .cta-wa-primary-btn .fa-whatsapp { font-size: 1.85rem; }
+  .cta-wa-primary-btn strong { font-size: .95rem; }
+  .cta-wa-primary-btn small  { font-size: .75rem; }
+  .cta-alt-row {
+    grid-template-columns: 1fr !important;
+    gap: .75rem;
+  }
+  .cta-jam-modern { padding: 1rem; }
+  .cta-jam-title  { font-size: .85rem; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .cta-wa-primary-btn { max-width: 100% !important; min-height: 52px; }
+  .cta-alt-row { grid-template-columns: 1fr !important; }
+}
+
+/* ── 10. FOOTER ─────────────────────────────────────────────────── */
+@media (max-width: 767px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.75rem;
+  }
+  .footer-desc { font-size: .875rem; }
+  .footer-col h4 { font-size: .9rem; }
+  .footer-col ul li { font-size: .85rem; }
+  .footer-bottom { flex-direction: column !important; gap: .5rem; text-align: center; }
+}
+
+/* ── 11. FLOATING WA BUTTON ─────────────────────────────────────── */
+@media (max-width: 767px) {
+  #wa-btn { bottom: 1.25rem !important; right: 1.25rem !important; }
+  .wa-circle {
+    width: 3.5rem !important;
+    height: 3.5rem !important;
+    box-shadow: 0 4px 20px rgba(37,211,102,.5) !important;
+  }
+  .wa-icon { font-size: 1.75rem !important; }
+  #wa-tooltip {
+    bottom: 4.5rem;
+    right: 0;
+    min-width: 180px;
+    font-size: .82rem;
+    padding: .75rem 1rem;
+  }
+}
+
+/* ── 12. SECTION PADDING — compact di mobile ────────────────────── */
+@media (max-width: 479px) {
+  .section-pad { padding-top: 2.25rem !important; padding-bottom: 1.75rem !important; }
+  .section-title { font-size: 1.45rem !important; }
+  .section-title.lg { font-size: 1.6rem !important; }
+  .section-desc { font-size: .875rem !important; }
+  #why-us .container { padding-top: 2rem !important; padding-bottom: 1.75rem !important; }
+}
+@media (min-width: 480px) and (max-width: 767px) {
+  .section-pad { padding-top: 2.75rem !important; padding-bottom: 2.25rem !important; }
+  .section-title.lg { font-size: 1.85rem !important; }
+}
+
+/* ── 13. TOUCH TARGET — semua tombol interaktif min 44px ────────── */
+@media (max-width: 767px) {
+  .btn-wa, .btn-lokasi,
+  .cta-wa-primary-btn,
+  .btn-maps-modern,
+  .btn-tulis-ulasan,
+  .btn-wa-white,
+  .review-btn,
+  .swipe-btn,
+  .hamburger,
+  #mobile-nav a,
+  .gmaps-badge {
+    min-height: 44px;
+  }
+  .btn-wa-white {
+    width: 100%;
+    justify-content: center;
+    min-height: 52px;
+    font-size: 1rem;
+  }
+  .brands-cta { padding: 1.5rem 1.25rem; }
+}
+
+/* ── 14. TABLET 768–1023px — layout tengah ─────────────────────── */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+  .hero-title { font-size: 2.5rem !important; }
+  .why-grid   { grid-template-columns: 1fr 1fr 1fr !important; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; }
+  .loc-grid   { grid-template-columns: 1fr !important; }
+  .produk-hero-grid { grid-template-columns: 1.4fr 1fr; }
+}
+
+/* ── 15. SCROLL HORIZONTAL SNAP untuk carousel produk di mobile ── */
+@media (max-width: 479px) {
+  .brand-scroll { -webkit-overflow-scrolling: touch; scroll-snap-type: x mandatory; }
+  .brand-item   { scroll-snap-align: start; }
+}
